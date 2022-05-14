@@ -6,6 +6,7 @@
 #define DESIGN_PATTERNS_OBSERVER_H
 
 class Observer {
+public:
     virtual void update() = 0;
 };
 

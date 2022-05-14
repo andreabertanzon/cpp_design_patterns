@@ -17,5 +17,7 @@ bool WeatherData::removeObserver(Observer *o) {
 }
 
 void WeatherData::notifyObservers() {
-
+    for(auto observer : observers){
+        observer -> update();
+    }
 }

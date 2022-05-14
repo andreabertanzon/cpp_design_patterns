@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <random>
+#include <iostream>
 #include "../../Headers/observer_headers/Subject.h"
 
 class WeatherData: public Subject {
@@ -33,6 +34,10 @@ public:
         return pressure;
     }
 
+    WeatherData(WeatherData& other){
+        std::cout << "WeatherData Copied! " << std::endl;
+    }
+
     /**
      * Faking new set of measurements coming from the outside.
      */
@@ -55,9 +60,9 @@ private:
      */
     std::vector<Observer*> observers;
 
-    double temperature;
-    double humidity;
-    double pressure;
+    double temperature{};
+    double humidity{};
+    double pressure{};
 };
 
 
