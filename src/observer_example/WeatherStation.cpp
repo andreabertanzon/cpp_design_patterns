@@ -18,9 +18,7 @@ void weatherStation() {
     weatherData.setMeasurement(); // Initialize weather data with fake random data
 
     CurrentConditionDisplay currentConditionDisplay(weatherData);
-    auto ptr = &currentConditionDisplay;
-
-    setupStation(ptr);
+    setupStation(&currentConditionDisplay);
 
     std::cout << "****** Welcome to the WeatherStation! ******" << std::endl;
     std::cout << "Press 1 to display data 0 to go back" << std::endl;

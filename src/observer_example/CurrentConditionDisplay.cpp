@@ -27,6 +27,5 @@ void CurrentConditionDisplay::update() {
 }
 
 void CurrentConditionDisplay::registerSelf() {
-    auto ptr = this;
     weatherData.registerObserver(this);
 }
